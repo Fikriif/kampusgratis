@@ -1,0 +1,23 @@
+[
+  {
+    "id": 1,
+    "name": "FullStack Development",
+    "img": "http://www.keycdn.com/img/support/full-stack-development.png",
+    "price": 5000000,
+    "value": 0
+  },
+  {
+    "id": 2,
+    "name": "UI/UX Design",
+    "img": "https://source.unsplash.com/1600x900/?food",
+    "price": 3000000,
+    "value": 0
+  },
+  {
+    "id": 3,
+    "name": "Data Science",
+    "img": "https://source.unsplash.com/1600x900/?spicy-food",
+    "price": 4000000,
+    "value": 0
+  }
+]
