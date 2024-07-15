@@ -2,7 +2,6 @@
 
 import React from "react";
 import { useCourses } from "../course/useCourses";
-import Image from "next/image";
 
 const CourseList: React.FC = () => {
   const { data, error, isLoading } = useCourses();
@@ -24,9 +23,6 @@ const CourseList: React.FC = () => {
             <h2>{course.id}</h2>
             <h3>{course.title}</h3>
             <h3>{course.completed}</h3>
-            {/* <Image src={course.img} alt="none" width={250} height={250} /> */}
-            {/* <p>Price: {course.price}</p>
-            <p>{course.value}</p> */}
           </li>
         ))}
       </ul>
