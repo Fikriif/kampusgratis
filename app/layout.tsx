@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import RecoilProvider from "./providers/RecoilProvider";
 import ReactQueryProvider from "./providers/ReactQueryProvider";
+import Header from "./component/homepage/Header";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -20,7 +21,10 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
         <ReactQueryProvider>
-          <RecoilProvider>{children}</RecoilProvider>
+          <RecoilProvider>
+            <Header />
+            {children}
+          </RecoilProvider>
         </ReactQueryProvider>
       </body>
     </html>

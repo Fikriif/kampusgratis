@@ -1,15 +1,11 @@
 import Link from "next/link";
 import Footer from "./component/homepage/Footer";
-import Header from "./component/homepage/Header";
 import Image from "next/image";
-import ExampleComponent from "./component/ExampleComponent";
-import CourseList from "./course/CourseList";
 
 const Home: React.FC = () => {
   return (
     <>
       <div>
-        <Header />
         <section>
           <div className="px-10 flex lg:flex-row md:flex-col">
             <div className="basis-1/2 md:py-20 lg:py-32">
@@ -39,7 +35,6 @@ const Home: React.FC = () => {
           <span className="text-primary">Kampus Gratis</span>
         </div>
         <section>
-          <CourseList />
           <div className="mt-10 text-2xl w-full flex md:flex-col lg:flex-row justify-around">
             <div className="max-w-64 p-2 border border-solid border-2 border-primary rounded-lg">
               <div>
@@ -141,7 +136,6 @@ const Home: React.FC = () => {
             </div>
           </div>
         </section>
-        <ExampleComponent />
         <Footer />
       </div>
     </>

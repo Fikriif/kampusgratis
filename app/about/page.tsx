@@ -1,12 +1,14 @@
+import CourseList from "../course/CourseList";
+
 const page = () => {
   return (
     <>
-      <header>
-        <div>
-          Tentang Kami
+      <header className="py-10">
+        <div className="flex justify-center text-primary font-semibold text-2xl">
+          React Query
         </div>
-        <div>
-          Kampus Gratis Adalah sebuah tempat dimana kita bisa mengasah ilmu pengetahuan kita tentang programming
+        <div className="flex items-center justify-center text-dark">
+          <CourseList />
         </div>
       </header>
     </>
