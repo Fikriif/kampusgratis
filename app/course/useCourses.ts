@@ -8,7 +8,7 @@ interface Course {
 
 const fetchCourses = async (page: number): Promise<Course[]> => {
   const response = await fetch(
-    "https://jsonplaceholder.typicode.com/todos/?_page=${page}&_limit=5"
+    "https://jsonplaceholder.typicode.com/todos/?_page=${page}&_limit=10"
   );
   if (!response.ok) {
     throw new Error("Network response was not ok");
