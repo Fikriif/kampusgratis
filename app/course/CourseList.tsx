@@ -1,10 +1,19 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 import { useCourses } from "../course/useCourses";
 
 const CourseList: React.FC = () => {
-  const { data, error, isLoading } = useCourses();
+  const [pageNumber, setPageNumber] = useState(1);
+  const { data, error, isLoading } = useCourses(pageNumber);
+
+  const handlePrevPage = () => {
+    setPageNumber((prev) => Math.max(prev - 1, 1));
+  };
+
+  const handleNextPage = () => {
+    setPageNumber((prev) => prev + 1);
+  };
 
   if (isLoading) {
     return <div>Loading...</div>;
@@ -26,6 +35,19 @@ const CourseList: React.FC = () => {
           </li>
         ))}
       </ul>
+      <div className="flex gap-2 mt-4">
+        <button
+          onClick={handlePrevPage}
+          disabled={pageNumber === 1}
+          className="p-2 bg-gray-300 rounded"
+        >
+          Previous
+        </button>
+        <span>Page {pageNumber}</span>
+        <button onClick={handleNextPage} className="p-2 bg-gray-300 rounded">
+          Next
+        </button>
+      </div>
     </div>
   );
 };
